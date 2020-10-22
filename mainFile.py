@@ -2,7 +2,7 @@
 # CSC 1980 and CSC2280 LC3
 # Innovation Time Project -- Main File
 
-import functions
+import Code.functions
 
 def main():
   """
