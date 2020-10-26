@@ -27,6 +27,8 @@ def displayMenu():
       print("You picked option 3!")
     elif userInput == "4":
       print("Have a nice rest of your day!".center(80))
+    else:
+      print("Please input a valid menu option")
 
 
 def printYeet():
