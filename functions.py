@@ -11,13 +11,15 @@ def displayMenu():
   This function displays a menu that the user can pick options from
   """
   userInput = ""
-  while userInput != "4":
-    print("GIVE ME A TITLE".center(80,"-"))
+  while userInput != "6":
+    print("Please Choose Your Stage of Flight.".center(80,"-"))
     print()
-    print("1) Menu Option 1")
-    print("2) Menu Option 2")
-    print("3) Menu Option 3")
-    print("4) Exit")
+    print("1) Preflight")
+    print("2) Takeoff")
+    print("3) Flight")
+    print("4) Landing")
+    print("5) Non-normal Checklist")
+    print("6) Exit")
     userInput = input("Type which option you wish to run here: ")
     if userInput == "1":
       print("You picked option 1!")
@@ -26,7 +28,11 @@ def displayMenu():
     elif userInput == "3":
       print("You picked option 3!")
     elif userInput == "4":
-      print("Have a nice rest of your day!".center(80))
+      print("You picked option 4!")
+    elif userInput == "5":
+      print("You picked option 5!")
+    elif userInput == "6":
+      print("Thank you for flying with us today!")
     else:
       print("Please input a valid menu option")
 
