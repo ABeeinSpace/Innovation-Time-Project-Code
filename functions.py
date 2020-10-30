@@ -23,15 +23,19 @@ def displayMenu(droneManufacturer):
     userInput = input("Type which option you wish to run here: ")
     if userInput == "1":
       print("Accessing Preflight Checklist...")
-      
+      checklists.preflight()
     elif userInput == "2":
       print("Accessing Takeoff Checklist...")
+      checklists.takeoff()
     elif userInput == "3":
       print("Accessing Flight Checklist...")
+      checklists.flight()
     elif userInput == "4":
       print("Accessing Landing Checklist...")
+      checklists.landing()
     elif userInput == "5":
       print("Accessing Non-normal Checklist...")
+      checklists.non-normal()
     elif userInput == "6":
       print("Thank you for flying with us today!")
     else:
