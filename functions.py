@@ -6,12 +6,30 @@
 
 import mainFile
 
+def preflightChecks(droneManufacturer):
+    """
+    This function just grabs preflight checks from .txt files in the "checklists" folder under same folder as the python files.
+    """
+    
+    if droneManufacturer == "DJI":
+      try:
+        textFileHandler = open("./checklists/preflight/djiPreflight/txt", "r")
+        textFileHandler.close()
+      except:
+        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
+
+def takeoffChecklist(droneManufacturer):
+    """
+    docstring
+    """
+    print("Do stuff and things")
+
 def displayMenu(droneManufacturer):
   """
   This function displays a menu that the user can pick options from
   """
-  userInput = ""
-  while userInput != "6":
+  userOption = ""
+  while userOption != "6":
     print("Please Choose Your Stage of Flight.".center(80,"-"))
     print()
     print("1) Preflight")
@@ -40,19 +58,6 @@ def displayMenu(droneManufacturer):
       print("Thank you for flying with us today!")
     else:
       print("Please input a valid menu option.")
-
-
-  def preflightChecks(droneManufacturer):
-    """
-    This function just grabs preflight checks from .txt files in the "checklists" folder under same folder as the python files.
-    """
-    
-    while True:
-      try:
-        textFileHandler = open("./checklists/preflight")
-      except fileNotFoundError:
-        print()
-        
 
 
 # def printYeet():
