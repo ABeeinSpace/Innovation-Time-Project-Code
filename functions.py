@@ -38,21 +38,22 @@ def displayMenu(droneManufacturer):
     print("4) Landing")
     print("5) Non-normal Checklist")
     print("6) Exit")
-    userOption = input("Type which option you wish to run here: ")
-    if userOption == "1":
-      preflightChecks(droneManufacturer)
-    elif userOption == "2":
-      print("You picked option 2!")
-    elif userOption == "3":
-      print("You picked option 3!")
-    elif userOption == "4":
-      print("You picked option 4!")
-    elif userOption == "5":
-      print("You picked option 5!")
-    elif userOption == "6":
+    userInput = input("Type which option you wish to run here: ")
+    if userInput == "1":
+      print("Accessing Preflight Checklist...")
+      
+    elif userInput == "2":
+      print("Accessing Takeoff Checklist...")
+    elif userInput == "3":
+      print("Accessing Flight Checklist...")
+    elif userInput == "4":
+      print("Accessing Landing Checklist...")
+    elif userInput == "5":
+      print("Accessing Non-normal Checklist...")
+    elif userInput == "6":
       print("Thank you for flying with us today!")
     else:
-      print("Please input a valid menu option")
+      print("Please input a valid menu option.")
 
 
 # def printYeet():
