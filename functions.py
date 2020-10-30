@@ -6,36 +6,46 @@
 
 import mainFile
 
-def displayMenu():
+def displayMenu(droneManufacturer):
   """
   This function displays a menu that the user can pick options from
   """
-  userInput = ""
-  while userInput != "4":
+  userOption = ""
+  while userOption != "4":
     print("GIVE ME A TITLE".center(80,"-"))
     print()
     print("1) Menu Option 1")
     print("2) Menu Option 2")
     print("3) Menu Option 3")
     print("4) Exit")
-    userInput = input("Type which option you wish to run here: ")
-    if userInput == "1":
-      print("You picked option 1!")
-    elif userInput == "2":
+    userOption = input("Type which option you wish to run here: ")
+    if userOption == "1":
+      preflightChecks
+    elif userOption == "2":
       print("You picked option 2!")
-    elif userInput == "3":
+    elif userOption == "3":
       print("You picked option 3!")
-    elif userInput == "4":
+    elif userOption == "4":
       print("Have a nice rest of your day!".center(80))
     else:
       print("Please input a valid menu option")
 
 
-  
+  def preflightChecks(droneManufacturer):
+    """
+    This function just grabs preflight checks from .txt files in the "checklists" folder under same folder as the python files.
+    """
+    
+    while True:
+      try:
+        textFileHandler = open("./checklists/preflight")
+      except fileNotFoundError:
+        print()
+        
 
 
-def printYeet():
-  """
-  docstring
-  """
-  print("double yeet.")
+# def printYeet():
+#   """
+#   docstring
+#   """
+#   print("double yeet.")
