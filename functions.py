@@ -8,7 +8,7 @@ import mainFile
 
 def preflightChecks(droneManufacturer):
     """
-    This function just grabs preflight checks from .txt files in the "checklists" folder under same folder as the python files.
+    This function just grabs preflight checks from .txt files in the "checklists" folder under the same folder as the python files.
     """
     
     if droneManufacturer == "DJI":
