@@ -1,4 +1,4 @@
-# Aidan Border
+# Aidan Border and Jonas York
 # CSC 1980 and CSC2280 LC3
 # Innovation Time Project -- Main File
 
