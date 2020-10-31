@@ -5,10 +5,11 @@ This repository is for my Innovation Time Project for the 2020-2021 school year.
 
 ## System requirements
 
-At present (Oct. 31st, 2020), only macOS and Linux is supported. I have not modified the program to use the operating system's path separator, as such Windows is NOT supported at this time. 
+Basically, the only thing one needs to use this script is Python 3
 
 Operating systems supported:
   1. macOS
   2. Linux
+  3. Windows
 Other requirements:
-  1. Python 3
+  1. Python 3 (developed using Python 3.9, but any Python 3.x version should work fine)

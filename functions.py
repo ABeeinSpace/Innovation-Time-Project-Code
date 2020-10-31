@@ -6,14 +6,14 @@
 
 import mainFile
 import checklist
-from os import system, name
+import os
 
 
 def clear():
-  if name == "nt":
-    _ = system("cls")
+  if os.name == "nt":
+    _ = os.system("cls")
   else:
-    _ = system("clear")
+    _ = os.system("clear")
 def preflightChecks(droneManufacturer):
     """
     This function just grabs preflight checks from .txt files in the "checklists" folder under the same folder as the python files.
@@ -22,7 +22,7 @@ def preflightChecks(droneManufacturer):
     if droneManufacturer == "DJI":
     # If the user has a DJI drone, then we try to load the preflight checklist related to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
-        textFileHandler = open("./checklists/preflight/djiPreflight.txt", "r")
+        textFileHandler = open(os.path.join("checklists", "preflight", "djiPreflight.rtf"), "r")
         textFileHandler.close()
       except FileNotFoundError:
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
