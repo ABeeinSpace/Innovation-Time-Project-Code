@@ -1,3 +1,7 @@
+# Aidan Border and Jonas York
+# CSC 1980 and CSC2280 LC3
+# Innovation Time Project -- Checklist Function File
+
 def preflightLoader(droneManufacturer):
   """
   Function that gets called to open the preflight checklist files depending on if the user specified DJI or Parrot
