@@ -17,6 +17,12 @@ def preflightChecks(droneManufacturer):
         textFileHandler.close()
       except:
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
+    if droneManufacturer == "Parrot":
+      try:
+        textFileHandler = open("./checklists/preflight/parrrotPreflight.txt", "r")
+        textFileHandler.close()
+      except:
+        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
 
 def takeoffChecklist(droneManufacturer):
     """
@@ -41,19 +47,21 @@ def displayMenu(droneManufacturer):
     userInput = input("Type which option you wish to run here: ")
     if userInput == "1":
       print("Accessing Preflight Checklist...")
-      checklists.preflight()
+      # checklists.preflight()
     elif userInput == "2":
       print("Accessing Takeoff Checklist...")
-      checklists.takeoff()
+      # checklists.takeoff()
     elif userInput == "3":
       print("Accessing Flight Checklist...")
-      checklists.flight()
+      # checklists.flight()
     elif userInput == "4":
       print("Accessing Landing Checklist...")
-      checklists.landing()
+      # checklists.landing()
     elif userInput == "5":
-      print("Accessing Non-normal Checklist...")
-      checklists.non-normal()
+      print("Accessing Non-Normal Checklist...")
+      print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE. YOU HAVE SECONDS AT BEST TO GET IT DOWN SAFELY.".center(80) + "\033[39m")
+      input("Press any key to continue....")
+      # checklists.non-normal()
     elif userInput == "6":
       print("Thank you for flying with us today!")
     else:

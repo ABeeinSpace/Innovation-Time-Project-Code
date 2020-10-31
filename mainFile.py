@@ -8,7 +8,7 @@ def main():
   """
   Main function for the program. It does all the things. Pretty kewl.
   """
-
+  print
   # Adding a line so the user can specify which manufacturer their drone is from. This will matter for which checklists we surface to the user
   droneManufacturer = input("Who made your drone? (Valid options are DJI and Parrot): ")
   if droneManufacturer != "DJI" or "Parrot":
