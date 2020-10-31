@@ -6,7 +6,14 @@
 
 import mainFile
 import checklist
+from os import system, name
 
+
+def clear():
+  if name == "nt":
+    _ = system("cls")
+  else:
+    _ = system("clear")
 def preflightChecks(droneManufacturer):
     """
     This function just grabs preflight checks from .txt files in the "checklists" folder under the same folder as the python files.
@@ -29,14 +36,14 @@ def takeoffChecklist(droneManufacturer):
     """
     docstring
     """
-    print("Do stuff and things")
+    print("Add things here!!!")
 
 def displayMenu(droneManufacturer):
   """
   This function displays a menu that the user can pick options from
   """
-  userOption = ""
-  while userOption != "6":
+  userInput = ""
+  while userInput != "6":
     print("Please Choose Your Stage of Flight.".center(80,"-"))
     print()
     print("1) Preflight")
