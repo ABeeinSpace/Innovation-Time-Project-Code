@@ -22,12 +22,12 @@ def preflightChecks(droneManufacturer):
     if droneManufacturer == "DJI":
     # If the user has a DJI drone, then we try to load the preflight checklist related to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
-        textFileHandler = open("./checklists/preflight/djiPreflight/txt", "r")
+        textFileHandler = open("./checklists/preflight/djiPreflight.txt", "r")
         textFileHandler.close()
       except FileNotFoundError:
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
     if droneManufacturer == "Parrot":
-    # If the user has a DJI drone, then we try to load the preflight checklist related to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    # If the user has a Parrot drone, then we try to load the preflight checklist related to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open("./checklists/preflight/parrrotPreflight.txt", "r")
         textFileHandler.close()
@@ -57,7 +57,7 @@ def displayMenu(droneManufacturer):
     userInput = input("Type which option you wish to run here: ")
     if userInput == "1":
       print("Accessing Preflight Checklist...")
-      # checklists.preflight()
+      preflightChecks(droneManufacturer)
     elif userInput == "2":
       print("Accessing Takeoff Checklist...")
       # checklists.takeoff()
