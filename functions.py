@@ -5,6 +5,7 @@
 # This file contains all of the Fun Functions that the main.py file needs in order to do its thing.
 
 import mainFile
+import checklist
 
 def preflightChecks(droneManufacturer):
     """
