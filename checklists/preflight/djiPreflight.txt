@@ -1,0 +1,4 @@
+Assuming you have already installed a battery into your drone:
+1. Put your control sticks down and to the center of the controller to arm the quad. You should hear the motors start and your props should be spinning.\
+2. While the motors are spinning on the ground, listen for a motor that does not sound right or a propeller that looks different. If that is the case, stop the motors (hold left stick down until they stop) and troubleshoot the issue.\
+3. If nothing seems wrong, preflights are complete! Go ahead and proceed to the takeoff checklist!
