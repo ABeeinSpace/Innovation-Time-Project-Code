@@ -69,7 +69,7 @@ def displayMenu(droneManufacturer):
       # checklists.landing()
     elif userInput == "5":
       print("Accessing Non-Normal Checklist...")
-      print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE. YOU HAVE SECONDS AT BEST TO GET IT DOWN SAFELY.".center(80) + "\033[39m")
+      print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
       input("Press any key to continue....")
       # checklists.non-normal()
     elif userInput == "6":
