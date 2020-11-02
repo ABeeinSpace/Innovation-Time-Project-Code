@@ -14,7 +14,7 @@ def main():
   '''
   Main function for the checklist.py file. Its job is to direct the user to run mainFile.py, as this file is just for accessing the checklists and needs functions from functions.py, which it wont have if mainFile isn't run first.
   '''
-  print("This is a main")
+  print("This is a main. Don't run me. Bad programmer.")
 
 if __name__ == "__main__":
     main()
