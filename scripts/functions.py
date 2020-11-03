@@ -18,20 +18,20 @@ def preflightChecks(droneManufacturer):
     This function just grabs preflight checks from .txt files in the "checklists" folder under the same folder as the python files.
     """
     
-    if droneManufacturer == "DJI":
-    # If the user has a DJI drone, then we try to load the preflight checklist related to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    if droneManufacturer == "dji":
+    # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open(os.path.join("checklists", "preflight", "djiPreflight.rtf"), "r")
         textFileHandler.close()
       except FileNotFoundError:
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
-    if droneManufacturer == "Parrot":
-    # If the user has a Parrot drone, then we try to load the preflight checklist related to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    if droneManufacturer == "parrot":
+    # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open("./checklists/preflight/parrrotPreflight.txt", "r")
         textFileHandler.close()
       except FileNotFoundError:
-        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
+        print("ERROR: 'The file djiPreflight.txt' wasn't found! Please make sure the checklist folder is present in the same directory as this file, or redownload this script.")
 
 def takeoffChecklist(droneManufacturer):
     """
