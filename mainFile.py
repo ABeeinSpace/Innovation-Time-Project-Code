@@ -2,13 +2,12 @@
 # CSC 1980 and CSC2280 LC3
 # Innovation Time Project -- Main File
 
-import functions
+from scripts import functions, checklist
 
 def main():
   """
   Main function for the program. It does all the things. Pretty kewl.
   """
-  print
   # Adding a line so the user can specify which manufacturer their drone is from. This will matter for which checklists we surface to the user.
   #TODO: Fix this cuz it's a bit stupid.
   droneManufacturer = input("Who made your drone? (Valid options are DJI and Parrot): ")
