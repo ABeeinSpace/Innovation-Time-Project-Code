@@ -1,4 +1,6 @@
 Assuming you have already installed a battery into your drone:
-1. Put your control sticks down and to the center of the controller to arm the quad. You should hear the motors start and your props should be spinning.\
-2. While the motors are spinning on the ground, listen for a motor that does not sound right or a propeller that looks different. If that is the case, stop the motors (hold left stick down until they stop) and troubleshoot the issue.\
-3. If nothing seems wrong, preflights are complete! Go ahead and proceed to the takeoff checklist!
+1. Scout out your launch site and identify potential hazards (Power lines, trees, buildings, and other things you could potentially crash into). 
+2. Plan your route for once you take off. This includes what altitude you plan to go to and what direction horizontally you want/need to go to in order to get out over those hazards you identified
+3. Put your control sticks down and to the center of the controller to arm the quad. You should hear the motors start and your props should be spinning.
+4. While the motors are spinning on the ground, listen for a motor that does not sound right or a propeller that looks different. If that is the case, stop the motors (hold left stick down until they stop) and troubleshoot the issue.\
+5. If nothing seems wrong, preflights are complete! Go ahead and proceed to the takeoff checklist!

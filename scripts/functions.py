@@ -15,7 +15,7 @@ def clear():
     _ = os.system("clear")
 def preflightChecks(droneManufacturer):
     """
-    This function just grabs preflight checks from .txt files in the "checklists" folder under the same folder as the python files.
+    This function just grabs preflight checks from .txt files in the "checklists/preflight" folder under the same folder as the python files.
     """
     
     if droneManufacturer == "dji":
@@ -41,7 +41,7 @@ def takeoffChecklist(droneManufacturer):
 
 def displayMenu(droneManufacturer):
   """
-  This function displays a menu that the user can pick options from
+  This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the 
   """
   userInput = ""
   while userInput != "6":
