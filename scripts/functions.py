@@ -21,13 +21,14 @@ def preflightChecks(droneManufacturer):
     if droneManufacturer == "dji":
     # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
-        textFileHandler = open(os.path.join("checklists", "preflight", "djiPreflight.rtf"), "r")
+        textFileHandler = open(os.path.join("checklists", "preflight", "djiPreflight.txt"), "r")
         preflightList = textFileHandler.readlines()
         textFileHandler.close()
       except FileNotFoundError:
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
       for each in preflightList:
         print(each)
+      input("Press any key to continue...")
     if droneManufacturer == "parrot":
     # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
