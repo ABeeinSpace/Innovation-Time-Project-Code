@@ -4,7 +4,6 @@
 
 # This file contains all of the Fun Functions that the main.py file needs in order to do its thing.
 
-import mainFile
 import os
 
 
@@ -73,13 +72,19 @@ def displayMenu(droneManufacturer):
     elif userInput == "5":
       print("Accessing Non-Normal Checklist...")
       print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
-      input("Press any key to continue....")
+      input("Press any key to ackknowledge this warning and continue....")
       # checklists.non-normal()
     elif userInput == "6":
       print("Thank you for flying with us today!")
     else:
       print("Please input a valid menu option.")
 
+def main():
+  print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
+  # print("DJI Preflight Checklist: ")
+
+if __name__ == "__main__":
+    main()
 
 # def printYeet():
 #   """

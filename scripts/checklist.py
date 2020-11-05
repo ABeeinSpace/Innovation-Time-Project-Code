@@ -12,9 +12,9 @@ def preflightLoader(droneManufacturer):
 
 def main():
   '''
-  Main function for the checklist.py file. Its job is to direct the user to run mainFile.py, as this file is just for accessing the checklists and needs functions from functions.py, which it wont have if mainFile isn't run first.
+  Main function for the checklist.py file. Once implemented, its job is to test the functions stored in this file. It does this by checking if the checklist files exist, and outputting their path if they do, and 'NOT FOUND' if they don't.
   '''
-  print("This is a main. Don't run me. Bad programmer.")
+  print("This is the main function for checklist.py. It tests that all files are present")
 
 if __name__ == "__main__":
     main()
