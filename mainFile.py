@@ -18,7 +18,7 @@ def main():
   else:
     print("Sorry, we do not support specific checklists for your drone type yet. However, you may still be able to use some of the checklists.")
     input("Press any key to continue....")
-  functions.displayMenu(droneManufacturer)
+    functions.displayMenu(droneManufacturer)
   # print("yeet")
   # functions.printYeet()
 
