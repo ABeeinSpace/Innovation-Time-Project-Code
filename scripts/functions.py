@@ -7,6 +7,10 @@
 import os
 
 def clear():
+  """
+  Function to define a way to clear the screen in a way that is cross-platform. I envision using it to improve readability once we show a guide or checklist.
+  """
+
   if os.name == "nt":
     _ = os.system("cls")
   else:
@@ -37,13 +41,13 @@ def preflightChecks(droneManufacturer):
 
 def takeoffChecklist(droneManufacturer):
     """
-    docstring
+    This function grabs the takeoff checklists from text files located in "checklists/takeoff. Future Aidan: You are NOT ALLOWED to complete this function. Leave it for Jonas."
     """
     print("Add things here!!!")
 
 def displayMenu(droneManufacturer):
   """
-  This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the 
+  This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
   """
   userInput = ""
   while userInput != "6":
@@ -72,21 +76,24 @@ def displayMenu(droneManufacturer):
       print("Accessing Non-Normal Checklist...")
       print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
       input("Press any key to ackknowledge this warning and continue....")
-      # checklists.non-normal()
+      displayNonNormalMenu()
     elif userInput == "6":
       print("Thank you for flying with us today!")
     else:
       print("Please input a valid menu option.")
 
+def displayNonNormalMenu():
+  """
+  This function displays a menu of checklists for off-nominal conditions, such as a motor failure or loss of remote control signal.
+  """
+  print("Non-Normal Checklists".center(80,"-"))
+  print("1) Motor Failure in Flight")
+  print("2) Loss of Remote Control Signal in Flight")
+  print("3) ")
+
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
-  # print("DJI Preflight Checklist: ")
+  # print(f"DJI Preflight Checklist: ")
 
 if __name__ == "__main__":
     main()
-
-# def printYeet():
-#   """
-#   docstring
-#   """
-#   print("double yeet.")
