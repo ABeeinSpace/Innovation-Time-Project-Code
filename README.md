@@ -12,4 +12,4 @@ Operating systems supported:
   2. Linux
   3. Windows
 Other requirements:
-  1. Python 3 (developed using Python 3.9, but any Python 3.x version should work fine)
+  1. Python 3 (developed using Python 3.8, but any Python 3.x version should work fine)
