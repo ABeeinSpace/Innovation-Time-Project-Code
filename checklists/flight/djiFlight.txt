@@ -1,0 +1,6 @@
+This one isn't strictly a checklist, but it is instead some tips and tricks.
+1. Hitting the "Pause" button at any point will stop the drone while it's doing something automated. This includes Return to Home, auto-land, and any of the QuickShot modes.
+2. The "cinematic" QuickShot mode will enable you to take smoother video. HOWEVER, it does this by lengthening your braking distance. You WILL NOT stop on a dime like you usually do.
+3. You can dig into the camera settings and change the gimbal braking rate to make it easier to get smoother up and down panning.
+4. The drone will tell you when you should start to head in (it'll be in the form of a notification that there's only enough battery power to return to home). Listen to it.
+5. If you give full right stick forward while you're in Return to Home mode, the drone will accelerate so you can get back faster if you left coming back until the last minute (On my DJI Mavic Air 1, I get about 30 miles an hour top speed with this trick).

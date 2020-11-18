@@ -45,6 +45,21 @@ def takeoffChecklist(droneManufacturer):
     """
     print("Add things here!!!")
 
+
+def flightChecklist(droneManufacturer):
+    """
+    This function grabs the flight checklists from text files located in "checklists/flight. Future Aidan: You are NOT ALLOWED to complete this function. Leave it for Jonas."
+    """
+    print("Add things here!!!")
+
+
+def landingChecklist(droneManufacturer):
+    """
+    This function grabs the landing checklists from text files located in "checklists/landing. Future Aidan: You are NOT ALLOWED to complete this function. Leave it for Jonas."
+    """
+    print("Add things here!!!")
+
+
 def displayMenu(droneManufacturer):
   """
   This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
