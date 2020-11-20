@@ -1,0 +1,28 @@
+There are three options you can take for landing:
+ 1. Return to Home and autoland
+ 2. Manually fly back to your launch site and use autoland
+ 3. Fly the whole thing manually.
+
+For a RTH autoland:
+
+ 1. Press Return to Home on your controller
+ 2. On your smart device, swipe right on the popup to enable RTH
+ 3. Monitor the drone as it flies back and be ready to take over if the drone flies itself into a bad spot.
+ 4. Assuming that the drone made it above you safely, it will pause for a moment, and then begin descending.
+ 5. When the drone is just over the ground, it will decide if the landing zone is suitable (It has trouble with uneven concrete and slanted surfaces). If it erroneously marks a surface as unsuitable, you can take over manually from this point and hold left stick down until the drone resumes descending.
+
+For a manual return and autoland:
+
+ 1. Fly the drone to roughly overhead (pitch the gimbal down if you need to verify that the drone is in a safe spot. Remember that autoland will come straight down).
+ 2. On your smart device, tap the autoland button, then swipe right on the popup to enable autoland.
+ 3. When the drone is just over the ground, it will decide if the landing zone is suitable (it has trouble with uneven concrete and slanted surfaces). If it erroneously marks a surface as unsuitable, you can take over manually from this point and hold left stick down until the drone resumes descending. Otherwise, it will automatically proceed.
+
+For a full manual return:
+
+You have a few options. For a clear flight area, you can add a left stick down component while coming in to eliminate that descent period once the drone is overhead. Otherwise: 
+ 1. Fly the drone back until it is directly overhead.
+ 2. Use left stick down to descend (I encourage using gimbal pitch down to verify you won't go into a tree or something on the way down).
+ 3. The drone will pause when it's just above the ground. Verify that the landing zone is safe (I DO NOT recommend landing a Mavic series, Spark, or Mavic Mini series drone directly onto grass. You have the possibility to crash if one prop starts cutting into grass and causes a flip). If its not a safe landing zone, go find a safe LZ.
+ 4. Once you have a safe LZ, hold left stick down until the drone starts descending again.
+
+If you plan to swap batteries and go back out, I recommend setting spent batteries out and letting them cool down before putting them back in your bag. The batteries won't be adversely affected if they get put straight into the bag, but batteries in general dislike being hot for long periods of time.
