@@ -8,7 +8,7 @@ import os
 
 def clear():
   """
-  Function to define a way to clear the screen in a way that is cross-platform. I envision using it to improve readability once we show a guide or checklist.
+  Function to define a way to clear the screen in a way that is cross-platform. I envision using it to improve readability once we show a guide or checklist by removing extraneous information from the screen.
   """
 
   if os.name == "nt":
@@ -27,7 +27,7 @@ def preflightChecks(droneManufacturer):
         preflightList = textFileHandler.readlines()
         textFileHandler.close()
       except FileNotFoundError:
-        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!!")
+        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
       for each in preflightList:
         print(each)
       input("Press any key to continue...")
@@ -108,7 +108,13 @@ def displayNonNormalMenu():
 
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
-  # print(f"DJI Preflight Checklist: ")
+  preflightPath = os.path.join("checklists", "preflight", "djiPreflight.txt")
+  takeoffPath = os.path.join("checklists", "takeoff", "djiTakeoff.txt")
+  flightPath = os.path.join("checklists", "flight", "djiFlight.txt")
+  print(f"DJI Preflight Checklist: {str(os.path.exists(preflightPath))}")
+  print(f"DJI Takeoff Checklist: {str(os.path.exists(takeoffPath))}")
+  print(f"DJI Flight Checklist: {str(os.path.exists(flightPath))}")
+
 
 if __name__ == "__main__":
     main()
