@@ -28,6 +28,8 @@ def preflightChecks(droneManufacturer):
         textFileHandler.close()
       except FileNotFoundError:
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+      clear()
+      print("".center(80, "-"))
       for each in preflightList:
         print(each)
       input("Press any key to continue...")
@@ -65,6 +67,7 @@ def displayMenu(droneManufacturer):
   This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
   """
   userInput = ""
+  clear()
   while userInput != "6":
     print("Please Choose Your Stage of Flight.".center(80,"-"))
     print()
