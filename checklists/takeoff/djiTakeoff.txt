@@ -1,5 +1,4 @@
 This checklist assumes you've already done your preflight and the props are running. If not, please perform a preflight or go back one page and follow the preflight checklist.
-
 1. Ensure your surroundings are clear before you liftoff
 2. Gently move the left stick up. Your drone should start to lift off.
 3. Keep gradually moving the left stick up until your drone is clear of any obstacles that may be in your flight path.
