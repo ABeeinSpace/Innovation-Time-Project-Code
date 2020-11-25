@@ -30,7 +30,7 @@ def preflightChecks(droneManufacturer):
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
       clear()
       print("".center(80, "-"))
-      for each in preflightList:
+      for each in preflightList: #type: ignore
         print(each)
       print()
       input("Press any key to continue...")
@@ -56,7 +56,7 @@ def takeoffChecklist(droneManufacturer):
         print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
       clear()
       print("".center(80, "-"))
-      for each in takeoffList:
+      for each in takeoffList: #type: ignore
         print(each)
       print()
       input("Press any key to continue...")
