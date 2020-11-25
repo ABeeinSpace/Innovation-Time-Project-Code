@@ -27,7 +27,7 @@ def preflightChecks(droneManufacturer):
         preflightList = textFileHandler.readlines()
         textFileHandler.close()
       except FileNotFoundError:
-        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+        print("The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
       clear()
       print("".center(80, "-"))
       for each in preflightList: #type: ignore
@@ -40,14 +40,14 @@ def preflightChecks(droneManufacturer):
         textFileHandler = open("./checklists/preflight/parrrotPreflight.txt", "r")
         textFileHandler.close()
       except FileNotFoundError:
-        print("ERROR: 'The file djiPreflight.txt' wasn't found! Please make sure the checklist folder is present in the same directory as this file, or redownload this script.")
+        print("ERROR: 'The file parrotPreflight.txt' wasn't found! Please make sure the checklist folder is present in the same directory as this file, or redownload this script.")
 
 def takeoffChecklist(droneManufacturer):
     """
     This function grabs the takeoff checklists from text files located in "checklists/takeoff."
     """
     if droneManufacturer == "dji":
-    # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    # If the user has a DJI drone, then we try to load the takeoff checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open(os.path.join("checklists", "takeoff", "djiTakeoff.txt"), "r")
         takeoffList = textFileHandler.readlines()
@@ -61,7 +61,7 @@ def takeoffChecklist(droneManufacturer):
       print()
       input("Press any key to continue...")
     if droneManufacturer == "parrot":
-    # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    # If the user has a Parrot drone, then we try to load the takeoff checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open("./checklists/takeoff/parrrotTakeoff.txt", "r")
         textFileHandler.close()
@@ -71,7 +71,7 @@ def takeoffChecklist(droneManufacturer):
 
 def flightChecklist(droneManufacturer):
     if droneManufacturer == "dji":
-    # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    # If the user has a DJI drone, then we try to load the flight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open(os.path.join("checklists", "flight", "djiFlight.txt"), "r")
         preflightList = textFileHandler.readlines()
@@ -85,7 +85,7 @@ def flightChecklist(droneManufacturer):
       print()
       input("Press any key to continue...")
     if droneManufacturer == "parrot":
-    # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    # If the user has a Parrot drone, then we try to load the flight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open("./checklists/flight/parrrotFlight.txt", "r")
         textFileHandler.close()
@@ -93,10 +93,9 @@ def flightChecklist(droneManufacturer):
         print("ERROR: 'The file parrotPreflight.txt' wasn't found! Please make sure the checklist folder is present in the same directory as this file, or redownload this script.")
 
 
-
 def landingChecklist(droneManufacturer):
     if droneManufacturer == "dji":
-    # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+    # If the user has a DJI drone, then we try to load the landing checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
         textFileHandler = open(os.path.join("checklists", "landing", "djiLanding.txt"), "r")
         preflightList = textFileHandler.readlines()
