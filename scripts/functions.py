@@ -70,17 +70,53 @@ def takeoffChecklist(droneManufacturer):
 
 
 def flightChecklist(droneManufacturer):
-    """
-    This function grabs the flight checklists from text files located in "checklists/flight. Future Aidan: You are NOT ALLOWED to complete this function. Leave it for Jonas."
-    """
-    print("Add things here!!!")
+    if droneManufacturer == "dji":
+    # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+      try:
+        textFileHandler = open(os.path.join("checklists", "flight", "djiFlight.txt"), "r")
+        preflightList = textFileHandler.readlines()
+        textFileHandler.close()
+      except FileNotFoundError:
+        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+      clear()
+      print("".center(80, "-"))
+      for each in preflightList: #type: ignore
+        print(each)
+      print()
+      input("Press any key to continue...")
+    if droneManufacturer == "parrot":
+    # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+      try:
+        textFileHandler = open("./checklists/flight/parrrotFlight.txt", "r")
+        textFileHandler.close()
+      except FileNotFoundError:
+        print("ERROR: 'The file parrotPreflight.txt' wasn't found! Please make sure the checklist folder is present in the same directory as this file, or redownload this script.")
+
 
 
 def landingChecklist(droneManufacturer):
-    """
-    This function grabs the landing checklists from text files located in "checklists/landing. Future Aidan: You are NOT ALLOWED to complete this function. Leave it for Jonas."
-    """
-    print("Add things here!!!")
+    if droneManufacturer == "dji":
+    # If the user has a DJI drone, then we try to load the preflight checklist specific to DJI drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+      try:
+        textFileHandler = open(os.path.join("checklists", "landing", "djiLanding.txt"), "r")
+        preflightList = textFileHandler.readlines()
+        textFileHandler.close()
+      except FileNotFoundError:
+        print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+      clear()
+      print("".center(80, "-"))
+      for each in preflightList: #type: ignore
+        print(each)
+      print()
+      input("Press any key to continue...")
+    if droneManufacturer == "parrot":
+    # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
+      try:
+        textFileHandler = open("./checklists/landing/parrrotLanding.txt", "r")
+        textFileHandler.close()
+      except FileNotFoundError:
+        print("ERROR: 'The file parrotLanding.txt' wasn't found! Please make sure the checklist folder is present in the same directory as this file, or redownload this script.")
+
 
 
 def displayMenu(droneManufacturer):
@@ -107,10 +143,10 @@ def displayMenu(droneManufacturer):
       takeoffChecklist(droneManufacturer)
     elif userInput == "3":
       print("Accessing Flight Checklist...")
-      # checklists.flight()
+      flightChecklist(droneManufacturer)
     elif userInput == "4":
       print("Accessing Landing Checklist...")
-      # checklists.landing()
+      landingChecklist(droneManufacturer)
     elif userInput == "5":
       print("Accessing Non-Normal Checklist...")
       print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
