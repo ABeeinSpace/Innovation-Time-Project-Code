@@ -1,0 +1,9 @@
+If you recieve a Gimbal Overload error prior to takeoff, it's due to a few things. The first cause is an actual hardware fault that you or DJI will need to look at. The second is a very easy fix that can be caught in preflight checks.
+
+1. Pick up your quad and power it off.
+2. Take the gimbal cover off (On the Mavic Air 1, there are two plastic parts on the bottom to squeeze together. After that, the cover will come out away from the front of the drone.
+3. Power back up. If the gimbal overload message clears, that was your issue.
+
+NOTE: If the gimbal cover was left in place, the video feed on your smart device will look cloudy and have a tint on it to whatever color your gimbal cover is (on my quad, its gray).
+
+If the error returns after you check the gimbal cover or it was not left installed in the first place, unfortunately you will not be flying today and you will need to look into possible solutions depending on your quad's model.

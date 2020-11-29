@@ -167,10 +167,13 @@ def displayNonNormalMenu():
   """
   This function displays a menu of checklists for off-nominal conditions, such as a motor failure or loss of remote control signal.
   """
-  print("Non-Normal Checklists".center(80,"-"))
-  print("1) Motor Failure in Flight")
-  print("2) Loss of Remote Control Signal in Flight")
-  print("3) ")
+  while userInput != "4":
+    print("Non-Normal Checklists".center(80,"-"))
+    print()
+    print("1) Motor Failure in Flight")
+    print("2) Loss of Remote Control Signal in Flight")
+    print("3) Gimbal Overload Error prior to takeoff or in flight")
+    print("4) Exit")
 
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
