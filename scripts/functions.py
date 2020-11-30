@@ -202,7 +202,7 @@ def main():
   preflightPath = os.path.join("checklists", "preflight", "djiPreflight.txt")
   takeoffPath = os.path.join("checklists", "takeoff", "djiTakeoff.txt")
   flightPath = os.path.join("checklists", "flight", "djiFlight.txt")
-  landingPath = os.path.join("checklists", "flight", "djiLanding.txt")
+  landingPath = os.path.join("checklists", "landing", "djiLanding.txt")
   print(f"DJI Preflight Checklist: {str(os.path.exists(preflightPath))}")
   print(f"DJI Takeoff Checklist: {str(os.path.exists(takeoffPath))}")
   print(f"DJI Flight Checklist: {str(os.path.exists(flightPath))}")
