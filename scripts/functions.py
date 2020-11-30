@@ -167,6 +167,8 @@ def displayNonNormalMenu():
   """
   This function displays a menu of checklists for off-nominal conditions, such as a motor failure or loss of remote control signal.
   """
+  userInput = ""
+  clear()
   while userInput != "4":
     print("Non-Normal Checklists".center(80,"-"))
     print()
@@ -174,15 +176,18 @@ def displayNonNormalMenu():
     print("2) Loss of Remote Control Signal in Flight")
     print("3) Gimbal Overload Error prior to takeoff or in flight")
     print("4) Exit")
+    userInput = input("Type which option you wish to run here: ")
 
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
   preflightPath = os.path.join("checklists", "preflight", "djiPreflight.txt")
   takeoffPath = os.path.join("checklists", "takeoff", "djiTakeoff.txt")
   flightPath = os.path.join("checklists", "flight", "djiFlight.txt")
+  landingPath = os.path.join("checklists", "flight", "djiLanding.txt")
   print(f"DJI Preflight Checklist: {str(os.path.exists(preflightPath))}")
   print(f"DJI Takeoff Checklist: {str(os.path.exists(takeoffPath))}")
   print(f"DJI Flight Checklist: {str(os.path.exists(flightPath))}")
+  print(f"DJI Landing Checklist: {str(os.path.exists(landingPath))}")
 
 
 if __name__ == "__main__":
