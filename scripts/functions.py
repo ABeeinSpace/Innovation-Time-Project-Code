@@ -163,13 +163,13 @@ def displayMenu(droneManufacturer):
       print("Accessing Non-Normal Checklist...")
       print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
       input("Press any key to ackknowledge this warning and continue....")
-      displayNonNormalMenu()
+      displayNonNormalMenu(droneManufacturer)
     elif userInput == "6":
       print("Thank you for flying with us today!")
     else:
       print("Please input a valid menu option.")
 
-def displayNonNormalMenu():
+def displayNonNormalMenu(droneManufacturer):
   """
   This function displays a menu of checklists for off-nominal conditions, such as a motor failure or loss of remote control signal.
   """
@@ -183,6 +183,19 @@ def displayNonNormalMenu():
     print("3) Gimbal Overload Error prior to takeoff or in flight")
     print("4) Back to Main Menu")
     userInput = input("Type which option you wish to run here: ")
+    if userInput == "1":
+      print("Accessing Motor Failure Checklist...")
+    # TODO: Actually implement this
+    elif userInput == "2":
+      print("Accessing LOS Checklist...")
+    # TODO: Actually implement this
+    elif userInput == "3":
+      print("Accessing Gimbal Overload Checklist...")
+    # TODO: Actually implement this
+    elif userInput == "4":
+      print("Thank you for flying with us today!")
+    else:
+      print("Please input a valid menu option.")
 
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
