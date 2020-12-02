@@ -1,5 +1,4 @@
 This is the nightmare scenario. In case of a motor failure or loss of thrust on one motor in flight, you have very little in the way of options. The ones that you do have are only delaying the inevitable.
-
 1. It's important to realize that the only thing keeping your quad in the sky is the propellers. If you lose thrust on one of those propellers, *you are going to crash*.
 2. If you have control, try to maneuver away from any people or other squishy obstacles.
 3. Once you're in a safe spot, I recommend disarming so that you don't have an out of control quadcopter. 

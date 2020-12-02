@@ -15,6 +15,7 @@ def clear():
     _ = os.system("cls")
   else:
     _ = os.system("clear")
+    
 def preflightChecks(droneManufacturer):
     """
     This function just grabs preflight checks from .txt files in the "checklists/preflight" folder under the same folder as the python files.
@@ -185,7 +186,7 @@ def displayNonNormalMenu(droneManufacturer):
     userInput = input("Type which option you wish to run here: ")
     if userInput == "1":
       print("Accessing Motor Failure Checklist...")
-    # TODO: Actually implement this
+      motorFailure()
     elif userInput == "2":
       print("Accessing LOS Checklist...")
     # TODO: Actually implement this
@@ -196,6 +197,24 @@ def displayNonNormalMenu(droneManufacturer):
       print("Thank you for flying with us today!")
     else:
       print("Please input a valid menu option.")
+
+def motorFailure():
+  """
+  docstring
+  """
+  try:
+    textFileHandler = open(os.path.join("checklists", "non-normal",  "djiMotorFailure.txt"), "r")
+    motorFailureList = textFileHandler.readlines()
+    textFileHandler.close()
+  except FileNotFoundError:
+    print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+    return
+  clear()
+  print("".center(80, "-"))
+  for each in motorFailureList: #type: ignore
+    print(each)
+  print()
+  input("Press any key to continue...")
 
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
