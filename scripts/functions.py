@@ -15,7 +15,7 @@ def clear():
     _ = os.system("cls")
   else:
     _ = os.system("clear")
-    
+
 def preflightChecks(droneManufacturer):
     """
     This function just grabs preflight checks from .txt files in the "checklists/preflight" folder under the same folder as the python files.
@@ -186,10 +186,10 @@ def displayNonNormalMenu(droneManufacturer):
     userInput = input("Type which option you wish to run here: ")
     if userInput == "1":
       print("Accessing Motor Failure Checklist...")
-      motorFailure()
+      motorFailureAccessor()
     elif userInput == "2":
       print("Accessing LOS Checklist...")
-    # TODO: Actually implement this
+      lossOfSignalAccessor()
     elif userInput == "3":
       print("Accessing Gimbal Overload Checklist...")
     # TODO: Actually implement this
@@ -198,9 +198,9 @@ def displayNonNormalMenu(droneManufacturer):
     else:
       print("Please input a valid menu option.")
 
-def motorFailure():
+def motorFailureAccessor():
   """
-  docstring
+  Accessor method for the motor failure *shudder* checklist. For all the drone pilots out there, I hope that you never have to use the items in this checklist, I really do. Motor failure at altitude means a Not Fun Repair Bill
   """
   try:
     textFileHandler = open(os.path.join("checklists", "non-normal",  "djiMotorFailure.txt"), "r")
@@ -216,16 +216,58 @@ def motorFailure():
   print()
   input("Press any key to continue...")
 
+def lossOfSignalAccessor():
+  """
+  Accessor method for the Loss of RC Signal checklist
+  """
+  try:
+    textFileHandler = open(os.path.join("checklists", "non-normal",  "djiLossOfRCSignal.txt"), "r")
+    losList = textFileHandler.readlines()
+    textFileHandler.close()
+  except FileNotFoundError:
+    print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+    return
+  clear()
+  print("".center(80, "-"))
+  for each in losList: #type: ignore
+    print(each)
+  print()
+  input("Press any key to continue...")
+
+def GimbalOverloadAccessor():
+  """
+  Accessor method for the loss of signal checklist
+  """
+  try:
+    textFileHandler = open(os.path.join("checklists", "non-normal",  "djiGimbalOverload.txt"), "r")
+    gimbalOverloadList = textFileHandler.readlines()
+    textFileHandler.close()
+  except FileNotFoundError:
+    print("The file wasn't found! Please make sure the checklist folder is present in the same directory as this file!!")
+    return
+  clear()
+  print("".center(80, "-"))
+  for each in gimbalOverloadList: #type: ignore
+    print(each)
+  print()
+  input("Press any key to continue...")
+
 def main():
   print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
   preflightPath = os.path.join("checklists", "preflight", "djiPreflight.txt")
   takeoffPath = os.path.join("checklists", "takeoff", "djiTakeoff.txt")
   flightPath = os.path.join("checklists", "flight", "djiFlight.txt")
   landingPath = os.path.join("checklists", "landing", "djiLanding.txt")
+  gimbalOverloadPath = os.path.join("checklists", "landing", "djiLanding.txt")
+  lossOfRCPath = os.path.join("checklists", "landing", "djiLanding.txt")
+  motorFailurePath = os.path.join("checklists", "landing", "djiLanding.txt")
   print(f"DJI Preflight Checklist: {str(os.path.exists(preflightPath))}")
   print(f"DJI Takeoff Checklist: {str(os.path.exists(takeoffPath))}")
   print(f"DJI Flight Checklist: {str(os.path.exists(flightPath))}")
   print(f"DJI Landing Checklist: {str(os.path.exists(landingPath))}")
+  print(f"Gimbal Overload Checklist :{str(os.path.exists(gimbalOverloadPath))}")
+  print(f"Loss of RC Signal Checklist :{str(os.path.exists(lossOfRCPath))}")
+  print(f"Motor Failure Checklist :{str(os.path.exists(motorFailurePath))}")
 
 
 if __name__ == "__main__":
