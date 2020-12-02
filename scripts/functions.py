@@ -253,14 +253,14 @@ def GimbalOverloadAccessor():
   input("Press any key to continue...")
 
 def main():
-  print("This is the main testing function from functions.py. It will print the paths of all checklist files and a warning if one wasn't found.")
+  print("This is a diagnostic function. It will print the paths of all checklist files and a warning if one wasn't found. If that warning gets printed, please check that the affected file is in the expected location. If the file is in the correct location and a warning is still thrown, please redownload the program from my GitHub repository")
   preflightPath = os.path.join("checklists", "preflight", "djiPreflight.txt")
   takeoffPath = os.path.join("checklists", "takeoff", "djiTakeoff.txt")
   flightPath = os.path.join("checklists", "flight", "djiFlight.txt")
   landingPath = os.path.join("checklists", "landing", "djiLanding.txt")
-  gimbalOverloadPath = os.path.join("checklists", "landing", "djiLanding.txt")
-  lossOfRCPath = os.path.join("checklists", "landing", "djiLanding.txt")
-  motorFailurePath = os.path.join("checklists", "landing", "djiLanding.txt")
+  gimbalOverloadPath = os.path.join("checklists", "non-normal", "djiGimbalOverload.txt")
+  lossOfRCPath = os.path.join("checklists", "non-normal", "djiLossOfSignal.txt")
+  motorFailurePath = os.path.join("checklists", "non-normal", "djiMotorFailure.txt")
   print(f"DJI Preflight Checklist: {str(os.path.exists(preflightPath))}")
   print(f"DJI Takeoff Checklist: {str(os.path.exists(takeoffPath))}")
   print(f"DJI Flight Checklist: {str(os.path.exists(flightPath))}")
