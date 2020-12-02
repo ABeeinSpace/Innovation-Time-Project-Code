@@ -259,15 +259,15 @@ def main():
   flightPath = os.path.join("checklists", "flight", "djiFlight.txt")
   landingPath = os.path.join("checklists", "landing", "djiLanding.txt")
   gimbalOverloadPath = os.path.join("checklists", "non-normal", "djiGimbalOverload.txt")
-  lossOfRCPath = os.path.join("checklists", "non-normal", "djiLossOfSignal.txt")
+  lossOfRCPath = os.path.join("checklists", "non-normal", "djiLossOfRCSignal.txt")
   motorFailurePath = os.path.join("checklists", "non-normal", "djiMotorFailure.txt")
   print(f"DJI Preflight Checklist: {str(os.path.exists(preflightPath))}")
   print(f"DJI Takeoff Checklist: {str(os.path.exists(takeoffPath))}")
   print(f"DJI Flight Checklist: {str(os.path.exists(flightPath))}")
   print(f"DJI Landing Checklist: {str(os.path.exists(landingPath))}")
-  print(f"Gimbal Overload Checklist :{str(os.path.exists(gimbalOverloadPath))}")
-  print(f"Loss of RC Signal Checklist :{str(os.path.exists(lossOfRCPath))}")
-  print(f"Motor Failure Checklist :{str(os.path.exists(motorFailurePath))}")
+  print(f"Gimbal Overload Checklist: {str(os.path.exists(gimbalOverloadPath))}")
+  print(f"Loss of RC Signal Checklist: {str(os.path.exists(lossOfRCPath))}")
+  print(f"Motor Failure Checklist: {str(os.path.exists(motorFailurePath))}")
 
 
 if __name__ == "__main__":
