@@ -192,7 +192,7 @@ def displayNonNormalMenu(droneManufacturer):
       lossOfSignalAccessor()
     elif userInput == "3":
       print("Accessing Gimbal Overload Checklist...")
-    # TODO: Actually implement this
+      GimbalOverloadAccessor()
     elif userInput == "4":
       print("Thank you for flying with us today!")
     else:
