@@ -35,7 +35,7 @@ def preflightChecks(droneManufacturer):
       for each in preflightList: #type: ignore
         print(each)
       print()
-      input("Press any key to continue...")
+      input("Press Enter to continue...")
     if droneManufacturer == "parrot":
     # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
       try:
@@ -62,7 +62,7 @@ def takeoffChecklist(droneManufacturer):
       for each in takeoffList: #type: ignore
         print(each)
       print()
-      input("Press any key to continue...")
+      input("Press Enter to continue...")
     if droneManufacturer == "parrot":
     # If the user has a Parrot drone, then we try to load the takeoff checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file and then exit.
       try:
@@ -91,7 +91,7 @@ def flightChecklist(droneManufacturer):
     for each in preflightList: #type: ignore
       print(each)
     print()
-    input("Press any key to continue...")
+    input("Press Enter to continue...")
   if droneManufacturer == "parrot":
   # If the user has a Parrot drone, then we try to load the flight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file and then exit.
     try:
@@ -120,7 +120,7 @@ def landingChecklist(droneManufacturer):
     for each in preflightList: #type: ignore
       print(each)
     print()
-    input("Press any key to continue...")
+    input("Press Enter to continue...")
   if droneManufacturer == "parrot":
   # If the user has a Parrot drone, then we try to load the preflight checklist specific to Parrot drones. If we can't load it, we print a warning to the user stating that we could not find the file.
     try:
@@ -163,7 +163,7 @@ def displayMenu(droneManufacturer):
     elif userInput == "5":
       print("Accessing Non-Normal Checklist...")
       print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
-      input("Press any key to ackknowledge this warning and continue....")
+      input("Press Enter to ackknowledge this warning and continue....")
       displayNonNormalMenu(droneManufacturer)
     elif userInput == "6":
       print("Thank you for flying with us today!")
@@ -214,7 +214,7 @@ def motorFailureAccessor():
   for each in motorFailureList: #type: ignore
     print(each)
   print()
-  input("Press any key to continue...")
+  input("Press Enter to continue...")
 
 def lossOfSignalAccessor():
   """
@@ -232,7 +232,7 @@ def lossOfSignalAccessor():
   for each in losList: #type: ignore
     print(each)
   print()
-  input("Press any key to continue...")
+  input("Press Enter to continue...")
 
 def GimbalOverloadAccessor():
   """
@@ -250,7 +250,7 @@ def GimbalOverloadAccessor():
   for each in gimbalOverloadList: #type: ignore
     print(each)
   print()
-  input("Press any key to continue...")
+  input("Press Enter to continue...")
 
 def main():
   print("This is a diagnostic function. It will print the paths of all checklist files and a warning if one wasn't found. If that warning gets printed, please check that the affected file is in the expected location. If the file is in the correct location and a warning is still thrown, please redownload the program from my GitHub repository")
