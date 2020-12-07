@@ -11,10 +11,8 @@ def main():
   This function sets up everything that the functions.py file needs, and then passes control to the displayMenu() function inside of functions.py.
   """
   # Adding a line so the user can specify which manufacturer their drone is from. This will matter for which checklists we surface to the user.
-  droneManufacturer = input("Who made your drone? (Valid options are DJI and Parrot): ").lower()
+  droneManufacturer = input("Who made your drone? (DJI is the only valid options at this time, more may be coming soon(TM)): ").lower()
   if droneManufacturer == "dji":
-    functions.displayMenu(droneManufacturer)
-  elif droneManufacturer == "parrot":
     functions.displayMenu(droneManufacturer)
   else:
     print("Sorry, we do not support specific checklists for your drone type yet. However, you may still be able to use some of the checklists.")
