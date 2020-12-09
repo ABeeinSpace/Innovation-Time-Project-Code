@@ -4,7 +4,7 @@
 
 # This file contains all of the Fun Functions that the main.py file needs in order to do its thing.
 
-import os
+import os, textwrap
 
 def clear():
   """
@@ -31,7 +31,8 @@ def preflightChecks(droneManufacturer):
     clear()
     print("".center(80, "-"))
     for each in preflightList: #type: ignore
-      print(each)
+      print(textwrap.fill(each, width=80))
+      print()
     print()
     input("Press Enter to continue...")
   # if droneManufacturer == "parrot":
@@ -57,7 +58,8 @@ def takeoffChecklist(droneManufacturer):
     clear()
     print("".center(80, "-"))
     for each in takeoffList: #type: ignore
-      print(each)
+      print(textwrap.fill(each, width=80))
+      print()
     print()
     input("Press Enter to continue...")
   # if droneManufacturer == "parrot":
@@ -86,7 +88,8 @@ def flightChecklist(droneManufacturer):
   clear()
   print("".center(80, "-"))
   for each in preflightList: #type: ignore
-    print(each)
+    print(textwrap.fill(each, width=80))
+    print()
   print()
   input("Press Enter to continue...")
 # if droneManufacturer == "parrot":
@@ -114,7 +117,8 @@ def landingChecklist(droneManufacturer):
   clear()
   print("".center(80, "-"))
   for each in preflightList: #type: ignore
-    print(each)
+    print(textwrap.fill(each, width=80))
+    print() 
   print()
   input("Press Enter to continue...")
 # if droneManufacturer == "parrot":
@@ -133,8 +137,8 @@ def displayMenu(droneManufacturer):
   This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
   """
   userInput = ""
-  clear()
   while userInput != "6":
+    clear()
     print("Please Choose Your Stage of Flight.".center(80,"-"))
     print()
     print("1) Preflight")
@@ -208,7 +212,8 @@ def motorFailureAccessor():
   clear()
   print("".center(80, "-"))
   for each in motorFailureList: #type: ignore
-    print(each)
+    print(textwrap.fill(each, width=80))
+    print()
   print()
   input("Press Enter to continue...")
 
@@ -226,7 +231,8 @@ def lossOfSignalAccessor():
   clear()
   print("".center(80, "-"))
   for each in losList: #type: ignore
-    print(each)
+    print(textwrap.fill(each, width=80))
+    print()
   print()
   input("Press Enter to continue...")
 
@@ -244,7 +250,8 @@ def GimbalOverloadAccessor():
   clear()
   print("".center(80, "-"))
   for each in gimbalOverloadList: #type: ignore
-    print(each)
+    print(textwrap.fill(each, width=80))
+    print()
   print()
   input("Press Enter to continue...")
 

@@ -4,14 +4,14 @@
 
 # This boi handles initialization and asks the user for their drone manufacturer. After it gets that thing from the user, it gets saved to the droneManufacturer variable. That variable gets passed into displayMenu() so I can surface the correct guides and checklists. For right now, it looks like I'll only end up having one manufacturer, DJI. More could be added at a later date.
 
-from scripts import functions, checklist
+from scripts import functions
 
 def main():
   """
   This function sets up everything that the functions.py file needs, and then passes control to the displayMenu() function inside of functions.py.
   """
   # Adding a line so the user can specify which manufacturer their drone is from. This will matter for which checklists we surface to the user.
-  droneManufacturer = input("Who made your drone? (DJI is the only valid options at this time, more may be coming soon(TM)): ").lower()
+  droneManufacturer = input("Who made your drone? (DJI is the only valid option at this time, more may be coming soon(TM)): ").lower()
   if droneManufacturer == "dji":
     functions.displayMenu(droneManufacturer)
   else:
