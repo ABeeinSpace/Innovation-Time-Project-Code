@@ -26,7 +26,7 @@ def preflightChecks(droneManufacturer):
       preflightList = textFileHandler.readlines()
       textFileHandler.close()
     except FileNotFoundError:
-      print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+      print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
       return
     clear()
     print("".center(80, "-"))
@@ -53,7 +53,7 @@ def takeoffChecklist(droneManufacturer):
       takeoffList = textFileHandler.readlines()
       textFileHandler.close()
     except FileNotFoundError:
-      print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+      print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
       return
     clear()
     print("".center(80, "-"))
@@ -83,7 +83,7 @@ def flightChecklist(droneManufacturer):
     preflightList = textFileHandler.readlines()
     textFileHandler.close()
   except FileNotFoundError:
-    print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+    print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
     return
   clear()
   print("".center(80, "-"))
@@ -112,7 +112,7 @@ def landingChecklist(droneManufacturer):
     preflightList = textFileHandler.readlines()
     textFileHandler.close()
   except FileNotFoundError:
-    print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+    print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
     return
   clear()
   print("".center(80, "-"))
@@ -137,8 +137,8 @@ def displayMenu(droneManufacturer):
   This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
   """
   userInput = ""
+  clear()
   while userInput != "6":
-    clear()
     print("Please Choose Your Stage of Flight.".center(80,"-"))
     print()
     print("1) Preflight")
@@ -162,13 +162,13 @@ def displayMenu(droneManufacturer):
       landingChecklist(droneManufacturer)
     elif userInput == "5":
       print("Accessing Non-Normal Checklist...")
-      print("\033[31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[39m")
+      print("\033[1;31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[0m")
       input("Press Enter to ackknowledge this warning and continue....")
       displayNonNormalMenu(droneManufacturer)
     elif userInput == "6":
       print("Thank you for flying with us today!")
     else:
-      print("\033[31m" + "Please input a valid menu option." + "\033[39m")
+      print("\033[1;31m" + "Please input a valid menu option." + "\033[0m")
 
 def displayNonNormalMenu(droneManufacturer):
   """
@@ -196,7 +196,7 @@ def displayNonNormalMenu(droneManufacturer):
     elif userInput == "4":
       return
     else:
-      print("\033[31m" + "Please input a valid menu option." + "\033[39m")
+      print("\033[1;31m" + "Please input a valid menu option." + "\033[0m")
 
 def motorFailureAccessor():
   """
@@ -207,7 +207,7 @@ def motorFailureAccessor():
     motorFailureList = textFileHandler.readlines()
     textFileHandler.close()
   except FileNotFoundError:
-    print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+    print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
     return
   clear()
   print("".center(80, "-"))
@@ -226,7 +226,7 @@ def lossOfSignalAccessor():
     losList = textFileHandler.readlines()
     textFileHandler.close()
   except FileNotFoundError:
-    print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+    print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
     return
   clear()
   print("".center(80, "-"))
@@ -245,7 +245,7 @@ def GimbalOverloadAccessor():
     gimbalOverloadList = textFileHandler.readlines()
     textFileHandler.close()
   except FileNotFoundError:
-    print("\033[31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[39m")
+    print("\033[1;31m" + "The file djiPreflight.txt wasn't found! Please make sure the checklist folder is present in the same directory as this file!!" + "\033[0m")
     return
   clear()
   print("".center(80, "-"))
