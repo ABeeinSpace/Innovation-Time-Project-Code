@@ -8,7 +8,7 @@ import os, textwrap
 
 def clear():
   """
-  Function to define a way to clear the screen in a way that is cross-platform. I envision using it to improve readability once we show a guide or checklist by removing extraneous information from the screen.
+  Function to define a way to clear the screen in a way that is cross-platform.
   """
 
   if os.name == "nt":
