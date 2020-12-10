@@ -13,4 +13,4 @@ Operating systems supported:
   3. Windows
 Other requirements:
   1. Python 3 (developed using Python 3.8, but any Python 3.x version should work fine)
-  
+  2. A terminal sized to a width of greater than 80 columns (That's the generally accepted width and what I've hard-coded. I might make the word wrapping and things based off of the terminal width so it doesn't have to be > 80 columns but that would come later)
