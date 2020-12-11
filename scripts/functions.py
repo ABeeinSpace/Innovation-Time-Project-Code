@@ -16,6 +16,45 @@ def clear():
   else:
     _ = os.system("clear")
 
+def displayMenu(droneManufacturer):
+  """
+  This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
+  """
+  userInput = ""
+  clear()
+  while userInput != "6":
+    print("Please Choose Your Stage of Flight.".center(80,"-"))
+    print()
+    print("1) Preflight")
+    print("2) Takeoff")
+    print("3) Flight")
+    print("4) Landing")
+    print("5) Non-normal Checklist")
+    print("6) Exit")
+    userInput = input("Type which option you wish to run here: ")
+    if userInput == "1":
+      print("Accessing Preflight Checklist...")
+      preflightChecks(droneManufacturer)
+    elif userInput == "2":
+      print("Accessing Takeoff Checklist...")
+      takeoffChecklist(droneManufacturer)
+    elif userInput == "3":
+      print("Accessing Flight Checklist...")
+      flightChecklist(droneManufacturer)
+    elif userInput == "4":
+      print("Accessing Landing Checklist...")
+      landingChecklist(droneManufacturer)
+    elif userInput == "5":
+      print("Accessing Non-Normal Checklist...")
+      print("\033[1;31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[0m")
+      input("Press Enter to ackknowledge this warning and continue....")
+      displayNonNormalMenu(droneManufacturer)
+    elif userInput == "6":
+      print("Thank you for flying with us today!")
+    else:
+      print("\033[1;31m" + "Please input a valid menu option." + "\033[0m")
+
+
 def preflightChecks(droneManufacturer):
     """
     This function just grabs preflight checks from .txt files in the "checklists/preflight" folder under the same folder as the python files.
@@ -132,43 +171,6 @@ def landingChecklist(droneManufacturer):
 
 
 
-def displayMenu(droneManufacturer):
-  """
-  This function displays a menu that the user can pick options from. An invalid option is caught, we tell the user that they've picked an option that doesn't quite work and then loop back to the menu
-  """
-  userInput = ""
-  clear()
-  while userInput != "6":
-    print("Please Choose Your Stage of Flight.".center(80,"-"))
-    print()
-    print("1) Preflight")
-    print("2) Takeoff")
-    print("3) Flight")
-    print("4) Landing")
-    print("5) Non-normal Checklist")
-    print("6) Exit")
-    userInput = input("Type which option you wish to run here: ")
-    if userInput == "1":
-      print("Accessing Preflight Checklist...")
-      preflightChecks(droneManufacturer)
-    elif userInput == "2":
-      print("Accessing Takeoff Checklist...")
-      takeoffChecklist(droneManufacturer)
-    elif userInput == "3":
-      print("Accessing Flight Checklist...")
-      flightChecklist(droneManufacturer)
-    elif userInput == "4":
-      print("Accessing Landing Checklist...")
-      landingChecklist(droneManufacturer)
-    elif userInput == "5":
-      print("Accessing Non-Normal Checklist...")
-      print("\033[1;31m" + "WARNING: Please only use these checklists for studying. If you actually have a flight that is going wrong, GET OFF YOUR COMPUTER NOW AND FLY THE DRONE".center(80) + "\033[0m")
-      input("Press Enter to ackknowledge this warning and continue....")
-      displayNonNormalMenu(droneManufacturer)
-    elif userInput == "6":
-      print("Thank you for flying with us today!")
-    else:
-      print("\033[1;31m" + "Please input a valid menu option." + "\033[0m")
 
 def displayNonNormalMenu(droneManufacturer):
   """
